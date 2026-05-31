@@ -4,6 +4,8 @@
   "expenses_database_id": "YOUR_EXPENSES_DATABASE_ID",
   "account_last4": "1234",
   "sender_match": "INDBNK",
+  "page_icon_name": "arrow-down",
+  "page_icon_color": "gray",
   "category_ids": {
     "Food & Drinks": "YOUR_CATEGORY_PAGE_ID",
     "Shopping": "YOUR_CATEGORY_PAGE_ID",

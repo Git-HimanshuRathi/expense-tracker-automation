@@ -170,6 +170,11 @@ def notion_create(cfg, name, amount, iso_dt, category_id):
     payload = json.dumps({
         "parent": {"database_id": cfg["expenses_database_id"]},
         "properties": props,
+        # Notion built-in icon (filled down-arrow disc) on every payment row.
+        "icon": {"type": "icon", "icon": {
+            "name": cfg.get("page_icon_name", "arrow-down"),
+            "color": cfg.get("page_icon_color", "gray"),
+        }},
     }).encode()
     req = urllib.request.Request(
         "https://api.notion.com/v1/pages", data=payload, method="POST",
